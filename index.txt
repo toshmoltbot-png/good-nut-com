@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>GOOD NUT - An Honest Review</title>
   <meta name="description" content="A parody review of a coconut water by a very unbiased former teammate." />
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <style>
     :root {
       --bg: #0d0a07;
