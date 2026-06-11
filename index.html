@@ -47,6 +47,8 @@
       color: var(--paper);
       font-family: Georgia, "Times New Roman", serif;
       line-height: 1.55;
+      overflow-x: hidden;
+      -webkit-text-size-adjust: 100%;
     }
 
     img {
@@ -362,7 +364,7 @@
       border-bottom: 1px solid var(--gold);
     }
 
-    /* mobile */
+    /* tablet + small desktop */
     @media (max-width: 760px) {
       h1 { font-size: 3.2rem; }
       h2 { font-size: 2.1rem; }
@@ -391,6 +393,102 @@
 
       .slab { padding: 16px; }
       .paper { padding: 18px; }
+    }
+
+    /* phones */
+    @media (max-width: 480px) {
+      .page {
+        width: calc(100% - 20px);
+      }
+
+      h1 {
+        font-size: 2.6rem;
+        text-shadow: 3px 3px 0 #000, 6px 6px 0 rgba(0,0,0,.35);
+      }
+
+      h2 { font-size: 1.8rem; }
+      h3 { font-size: 1.2rem; }
+
+      .dek { font-size: 1rem; }
+
+      .zero { font-size: 5.5rem; }
+      .goal { font-size: 1.3rem; }
+      .closing .call { font-size: 2.4rem; }
+
+      .aside {
+        font-size: 1.05rem;
+        border-left-width: 5px;
+        padding-left: 14px;
+        margin: 20px 0;
+      }
+
+      .big p { font-size: 1.05rem; }
+      p { font-size: 1rem; }
+      .review p { font-size: .95rem; }
+
+      .paper { padding: 14px; }
+      .slab { padding: 12px; }
+      .scrap { padding: 14px; }
+      .review { padding: 16px; }
+
+      /* kill rotations on phones -- they eat horizontal space */
+      .hero,
+      .text-exchange,
+      .paper.alt,
+      .paper.alt2,
+      .review:nth-child(2),
+      .review:nth-child(3),
+      .review:nth-child(4) {
+        transform: none;
+      }
+
+      .hero,
+      .text-exchange,
+      .photo,
+      .paper,
+      .review {
+        box-shadow: 4px 4px 0 #000;
+        border-width: 2px;
+      }
+
+      .receipt {
+        font-size: 11px;
+        padding: 5px 10px;
+        box-shadow: 4px 4px 0 #000;
+      }
+
+      .score {
+        font-size: .85rem;
+        padding: 4px 8px;
+      }
+
+      section { padding: 28px 0; }
+      header { padding: 28px 0 18px; }
+
+      .text-exchange {
+        max-width: 100%;
+      }
+
+      .hero figcaption,
+      .photo figcaption {
+        font-size: 11px;
+        padding: 6px 8px;
+      }
+
+      footer {
+        font-size: 11px;
+        padding: 20px 0 40px;
+        padding-bottom: calc(40px + env(safe-area-inset-bottom, 0px));
+      }
+
+      footer a {
+        display: inline-block;
+        padding: 8px 0;
+      }
+
+      .disclaimer {
+        font-size: 11px;
+      }
     }
 
     /* bigger screens */
