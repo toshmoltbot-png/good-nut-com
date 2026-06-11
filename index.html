@@ -1,448 +1,622 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>GOOD NUT - An Honest Review</title>
-  <meta name="description" content="A parody review of a coconut water by a very unbiased former teammate." />
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GOOD NUT DOT COM</title>
+  <meta name="description" content="A very normal website about coconut water, friendship, and being left out of the ad.">
+  <meta property="og:title" content="GOOD NUT - An Honest Review">
+  <meta property="og:description" content="My best friend launched a coconut water called Good Nut and did not ask me to be in the ad. This is my response.">
+  <meta property="og:image" content="https://good-nut.com/assets/hero-review.png">
+  <meta property="og:url" content="https://good-nut.com">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="GOOD NUT - An Honest Review">
+  <meta name="twitter:description" content="My best friend launched a coconut water and did not ask me to be in the ad.">
+  <meta name="twitter:image" content="https://good-nut.com/assets/hero-review.png">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
   <style>
     :root {
-      --bg: #0d0a07;
-      --panel: #17110c;
-      --panel-2: #21170f;
-      --text: #fff7e8;
-      --muted: #d8c4a2;
-      --gold: #f7c85b;
-      --coconut: #b98545;
-      --blue: #48c8e8;
-      --green: #74c476;
-      --red: #e85d4f;
-      --shadow: rgba(0,0,0,.35);
-      --max: 1060px;
+      --bg: #100b07;
+      --paper: #fff3d6;
+      --ink: #1b1008;
+      --brown: #5a341a;
+      --gold: #f3bb38;
+      --red: #d94a38;
+      --blue: #41c7e8;
+      --green: #6fc46b;
+      --muted: #b89362;
+      --max: 980px;
     }
 
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: var(--text);
       background:
-        radial-gradient(circle at top, rgba(247,200,91,.14), transparent 34rem),
-        linear-gradient(180deg, #15100b 0%, var(--bg) 45%, #070504 100%);
-      line-height: 1.6;
+        radial-gradient(circle at top left, rgba(243,187,56,.22), transparent 360px),
+        radial-gradient(circle at bottom right, rgba(65,199,232,.12), transparent 360px),
+        var(--bg);
+      color: var(--paper);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.55;
     }
 
-    img { max-width: 100%; display: block; }
-    a { color: inherit; }
+    img {
+      max-width: 100%;
+      display: block;
+    }
 
-    .wrap { width: min(var(--max), calc(100% - 32px)); margin: 0 auto; }
+    a {
+      color: inherit;
+    }
+
+    .page {
+      width: min(var(--max), calc(100% - 28px));
+      margin: 0 auto;
+    }
+
+    .top-note {
+      padding: 14px 0;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 12px;
+      color: var(--muted);
+      text-align: center;
+      letter-spacing: .04em;
+    }
 
     header {
-      padding: 60px 0 40px;
+      padding: 38px 0 24px;
       text-align: center;
+      position: relative;
     }
 
-    .eyebrow {
-      letter-spacing: .22em;
-      text-transform: uppercase;
-      color: var(--gold);
-      font-weight: 900;
-      font-size: .82rem;
-      font-style: italic;
-    }
-
-    .section-label {
-      letter-spacing: .2em;
-      text-transform: uppercase;
-      font-weight: 900;
-      font-style: italic;
-      font-size: .8rem;
-      color: var(--text);
-      margin-bottom: 8px;
-    }
-
-    .accent {
-      color: var(--gold);
+    .receipt {
+      display: inline-block;
+      transform: rotate(-2deg);
+      background: var(--paper);
+      color: var(--ink);
+      padding: 7px 12px;
+      border: 2px solid #000;
+      box-shadow: 6px 6px 0 #000;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 13px;
       font-weight: 700;
-      font-size: clamp(1rem, 1.5vw, 1.2rem);
+      text-transform: uppercase;
     }
 
     h1 {
-      margin: 12px 0 8px;
-      font-size: clamp(4.5rem, 15vw, 11rem);
+      margin: 24px auto 8px;
+      max-width: 940px;
+      font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+      font-size: 4.3rem;
       line-height: .78;
-      letter-spacing: -.06em;
+      letter-spacing: -.055em;
       text-transform: uppercase;
-      font-style: italic;
-      text-shadow: 0 8px 28px var(--shadow);
+      color: var(--gold);
+      text-shadow:
+        4px 4px 0 #000,
+        8px 8px 0 rgba(0,0,0,.35);
     }
 
-    .subtitle {
-      max-width: 880px;
-      margin: 0 auto;
-      font-size: clamp(1.1rem, 2vw, 1.55rem);
-      color: var(--muted);
+    .dek {
+      max-width: 780px;
+      margin: 14px auto 0;
+      font-size: 1.15rem;
       font-weight: 700;
+      color: #ffe6ad;
     }
 
-    .emoji-line {
-      font-size: 2rem;
-      letter-spacing: .35em;
-      margin: 24px auto 0;
-      opacity: .95;
+    .tiny-confession {
+      margin-top: 12px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      color: var(--muted);
+      font-size: 13px;
     }
 
-    .hero-img,
-    .feature-img {
-      border-radius: 0;
-      overflow: hidden;
-      box-shadow: none;
-      border: none;
-      margin: 40px -16px 0;
+    figure {
+      margin: 0;
+    }
+
+    .hero {
+      margin: 32px auto 0;
+      border: 3px solid #000;
       background: #000;
+      box-shadow: 10px 10px 0 #000;
+      transform: rotate(.4deg);
     }
 
-    @media (min-width: 761px) {
-      .hero-img,
-      .feature-img {
-        border-radius: 24px;
-        margin: 40px auto 0;
-        box-shadow: 0 30px 80px rgba(0,0,0,.45);
-      }
+    .hero figcaption,
+    .photo figcaption {
+      padding: 8px 10px;
+      background: #000;
+      color: #f8d78a;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 12px;
+      text-align: left;
     }
 
-    section { padding: 80px 0; }
-    .section-card {
-      background: transparent;
-      border: none;
-      border-radius: 0;
-      padding: clamp(24px, 5vw, 56px) 0;
-      box-shadow: none;
+    main {
+      padding-bottom: 40px;
     }
 
-    .section-card.boxed {
-      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
-      border: 1px solid rgba(255,255,255,.08);
-      border-radius: 32px;
-      padding: clamp(24px, 5vw, 56px);
-      box-shadow: 0 22px 60px rgba(0,0,0,.24);
+    section {
+      padding: 48px 0;
+    }
+
+    .slab {
+      background: rgba(255,243,214,.08);
+      border: 2px solid rgba(255,243,214,.2);
+      padding: 22px;
+    }
+
+    .paper {
+      background: var(--paper);
+      color: var(--ink);
+      border: 3px solid #000;
+      box-shadow: 8px 8px 0 #000;
+      padding: 24px;
+    }
+
+    .paper.alt {
+      transform: rotate(-.35deg);
+    }
+
+    .paper.alt2 {
+      transform: rotate(.45deg);
+    }
+
+    .label {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      font-size: 12px;
+      font-weight: 900;
+      color: var(--red);
+      margin-bottom: 8px;
     }
 
     h2 {
-      font-size: clamp(2.4rem, 6vw, 5.5rem);
-      line-height: .88;
-      margin: 0 0 28px;
-      letter-spacing: -.04em;
+      margin: 0 0 18px;
+      font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+      font-size: 2.8rem;
+      line-height: .9;
+      letter-spacing: -.035em;
       text-transform: uppercase;
-      font-style: italic;
-      font-weight: 900;
     }
 
     h3 {
       margin: 0 0 8px;
-      font-size: clamp(1.35rem, 3vw, 2.25rem);
-      line-height: 1;
+      font-size: 1.4rem;
+      line-height: 1.05;
     }
 
-    p { margin: 0 0 1.15rem; font-size: clamp(1.05rem, 1.5vw, 1.22rem); }
-    .big p { font-size: clamp(1.16rem, 2vw, 1.55rem); line-height: 1.6; }
-    .short-lines p { margin-bottom: .72rem; }
-    .center { text-align: center; }
-    .muted { color: var(--muted); }
-    .fine { font-size: .92rem; color: var(--muted); }
+    p {
+      margin: 0 0 1rem;
+      font-size: 1.08rem;
+    }
 
-    .callout {
-      margin: 40px 0;
-      padding: 28px 32px;
-      border-left: 7px solid var(--gold);
-      background: rgba(247,200,91,.06);
-      border-radius: 0;
+    .big p {
+      font-size: 1.2rem;
+    }
+
+    .punch {
+      display: inline;
+      background: linear-gradient(transparent 56%, rgba(243,187,56,.55) 56%);
       font-weight: 900;
-      font-style: italic;
-      font-size: clamp(1.2rem, 2.5vw, 1.8rem);
-      color: #fff0c8;
     }
 
-    .grid {
-      display: grid;
-      gap: 22px;
-    }
-
-    .review-grid {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .faq-grid {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .flavor,
-    .faq {
-      background: rgba(0,0,0,.22);
-      border: 1px solid rgba(255,255,255,.08);
-      border-radius: 16px;
-      padding: 28px;
-    }
-
-    .flavor {
+    .counter {
       text-align: center;
+      padding: 30px 10px;
     }
 
-    .flavor .one-liner {
-      font-style: italic;
-      color: var(--muted);
-      font-size: 1rem;
-      margin: 0;
+    .counter h2 {
+      margin-bottom: 10px;
     }
 
-    .score {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      margin: 5px 0 14px;
-      padding: 8px 14px;
-      border-radius: 999px;
-      background: rgba(247,200,91,.12);
+    .zero {
+      font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+      font-size: 12rem;
+      line-height: .78;
+      color: var(--red);
+      text-shadow: 5px 5px 0 #000;
+    }
+
+    .goal {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
       color: var(--gold);
-      font-size: 1.05rem;
+      font-size: 1.6rem;
       font-weight: 900;
-      border: 1px solid rgba(247,200,91,.25);
+      text-transform: uppercase;
+      margin-top: 12px;
+    }
+
+    .aside {
+      border-left: 8px solid var(--gold);
+      padding: 14px 0 14px 20px;
+      margin: 28px 0;
+      font-size: 1.35rem;
+      font-weight: 900;
+      font-style: italic;
+      color: #8b4513;
     }
 
     .text-exchange {
-      max-width: 560px;
-      margin: 28px auto 0;
-      border-radius: 34px;
+      max-width: 540px;
+      margin: 20px auto 0;
+      border: 3px solid #000;
+      box-shadow: 8px 8px 0 #000;
+      background: #000;
+      transform: rotate(.65deg);
     }
 
-    .counter-inline {
-      text-align: center;
-      padding: 36px 20px;
+    .reviews {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin-top: 24px;
     }
-    .zero {
-      font-size: clamp(8rem, 28vw, 18rem);
-      line-height: .75;
-      font-weight: 950;
-      font-style: italic;
-      color: var(--red);
-      text-shadow: 0 0 40px rgba(232,93,79,.35);
+
+    .review {
+      background: #fff7e6;
+      color: var(--ink);
+      border: 3px solid #000;
+      padding: 20px;
+      box-shadow: 6px 6px 0 #000;
     }
-    .goal { font-size: clamp(1.4rem, 4vw, 3rem); font-weight: 900; font-style: italic; color: var(--gold); }
 
+    .review:nth-child(2) {
+      transform: rotate(.55deg);
+    }
 
+    .review:nth-child(3) {
+      transform: rotate(-.45deg);
+    }
+
+    .review:nth-child(4) {
+      transform: rotate(.25deg);
+    }
+
+    .score {
+      display: inline-block;
+      margin: 4px 0 13px;
+      padding: 5px 10px;
+      background: var(--gold);
+      color: #1b1008;
+      border: 2px solid #000;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-weight: 900;
+    }
+
+    .review p {
+      font-size: 1.02rem;
+    }
+
+    .scraps {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .scrap {
+      background: rgba(0,0,0,.25);
+      border: 1px dashed rgba(255,243,214,.38);
+      padding: 18px;
+    }
+
+    .scrap strong {
+      color: var(--gold);
+    }
+
+    .photo {
+      margin-top: 20px;
+      border: 3px solid #000;
+      box-shadow: 8px 8px 0 #000;
+      background: #000;
+    }
 
     .closing {
-      background:
-        linear-gradient(180deg, rgba(116,196,118,.1), rgba(0,0,0,.2)),
-        var(--panel);
+      text-align: center;
+    }
+
+    .closing .call {
+      font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+      font-size: 4.5rem;
+      line-height: .88;
+      color: var(--red);
+      text-transform: uppercase;
+      text-shadow: 3px 3px 0 #000;
+      margin: 20px 0;
     }
 
     .disclaimer {
-      margin-top: 32px;
-      padding: 32px;
-      border: 1px solid rgba(255,255,255,.1);
-      border-radius: 0;
-      color: var(--muted);
-      background: rgba(0,0,0,.15);
-      font-size: 0.9rem;
-      line-height: 1.8;
+      margin-top: 22px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 12px;
+      line-height: 1.7;
+      color: #c9a978;
+      border-top: 1px solid rgba(255,243,214,.22);
+      padding-top: 18px;
     }
 
     footer {
-      padding: 38px 0 54px;
+      padding: 28px 0 54px;
       text-align: center;
       color: var(--muted);
-      font-size: .95rem;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 12px;
     }
 
+    footer a {
+      color: var(--gold);
+      text-decoration: none;
+      border-bottom: 1px solid var(--gold);
+    }
+
+    /* mobile */
     @media (max-width: 760px) {
-      .review-grid { grid-template-columns: 1fr; }
-      .faq-grid { grid-template-columns: 1fr; }
-      section { padding: 46px 0; }
-      .emoji-line { letter-spacing: .18em; font-size: 1.55rem; }
-      .sticky-counter { bottom: 12px; right: 12px; padding: 10px 14px; }
-      .sticky-counter .sticky-zero { font-size: 1.8rem; }
+      h1 { font-size: 3.2rem; }
+      h2 { font-size: 2.1rem; }
+      .zero { font-size: 7rem; }
+      .closing .call { font-size: 3rem; }
+      .big p { font-size: 1.1rem; }
+      .aside { font-size: 1.15rem; }
+      .dek { font-size: 1.05rem; }
+
+      .reviews,
+      .scraps {
+        grid-template-columns: 1fr;
+      }
+
+      .hero,
+      .text-exchange,
+      .photo,
+      .paper,
+      .review {
+        box-shadow: 5px 5px 0 #000;
+      }
+
+      section {
+        padding: 36px 0;
+      }
+
+      .slab { padding: 16px; }
+      .paper { padding: 18px; }
     }
 
-    @media (max-width: 480px) {
-      .review-grid { grid-template-columns: 1fr; }
+    /* bigger screens */
+    @media (min-width: 900px) {
+      h1 { font-size: 11rem; }
+      h2 { font-size: 5rem; }
+      .zero { font-size: 20rem; }
+      .goal { font-size: 2rem; }
+      .aside { font-size: 1.75rem; }
+      .closing .call { font-size: 7.5rem; }
+      .big p { font-size: 1.5rem; }
+      .aside { font-size: 1.75rem; }
+      .dek { font-size: 1.55rem; }
+      .paper { padding: 42px; }
+      .slab { padding: 38px; }
     }
   </style>
-<!-- Privacy-friendly analytics by Plausible -->
-<script async src="https://plausible.io/js/pa-JwwH5cYLwMBuS0wUxes5Q.js"></script>
-<script>
-  window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
-  plausible.init()
-</script>
+
+  <!-- Plausible -->
+  <script async src="https://plausible.io/js/pa-JwwH5cYLwMBuS0wUxes5Q.js"></script>
+  <script>
+    window.plausible = window.plausible || function(){ (plausible.q = plausible.q || []).push(arguments); };
+    plausible.init = plausible.init || function(i){ plausible.o = i || {}; };
+    plausible.init();
+  </script>
 </head>
+
 <body>
+  <div class="top-note">good-nut.com / unfortunately real / emotionally hydrated</div>
 
+  <header class="page">
+    <div class="receipt">A calm and normal review</div>
 
-
-  <!-- 1. HERO -->
-  <header class="wrap">
-    <div class="eyebrow">A completely unbiased review</div>
     <h1>GOOD NUT 🥥</h1>
-    <p class="subtitle">An Honest Review of My Best Friend's Coconut Water by the Guy Who Scored Exactly 69 Career Touchdowns (Nice)</p>
 
-    <figure class="hero-img">
-      <img src="assets/hero-review.png" alt="Dramatic parody poster of a football player inspecting a coconut water can." />
+    <p class="dek">
+      A website I bought because my best friend launched a coconut water and somehow did not ask me,
+      a 6'6&quot; professional coconut-spiking machine, to be in the ad.
+    </p>
+
+    <p class="tiny-confession">I am handling it great.</p>
+
+    <figure class="hero">
+      <img src="assets/hero-review.png" alt="Dramatic parody poster of a football player inspecting a coconut water can.">
+      <figcaption>artist's rendering of one man bravely reviewing beverages while processing betrayal</figcaption>
     </figure>
   </header>
 
   <main>
-
-    <!-- 2. COUNTER (immediately after hero) -->
-    <section style="padding: 40px 0;">
-      <div class="wrap counter-inline" id="counterSection">
-        <h2 style="margin-bottom: 12px;">Times I've Been Asked to Be in a Good Nut Ad</h2>
-        <div class="zero">0</div>
-        <p class="muted" style="margin-top: 8px;">updated in real time, unfortunately</p>
-        <div class="goal">goal: 69</div>
-      </div>
+    <section class="page counter">
+      <h2>Times I've Been Asked To Be In A Good Nut Ad</h2>
+      <div class="zero">0</div>
+      <p style="font-size:.95rem; color:#b89362; margin:8px 0 0">updated in real time, unfortunately</p>
+      <div class="goal">goal: 69</div>
     </section>
 
-    <!-- 3. OPENING (trimmed, best lines only) -->
-    <section>
-      <div class="wrap big short-lines">
-        <p class="section-label">The Situation.</p>
-        <h2>So My Best Friend Launched a Coconut Water.</h2>
+    <section class="page">
+      <div class="paper alt big">
+        <div class="label">The situation</div>
+        <h2>My Best Friend Launched A Coconut Water.</h2>
+
         <p>I love this guy.</p>
         <p>Came out of retirement for him.</p>
         <p>Moved across the country for him.</p>
         <p>Won championships with him.</p>
-        <p>If this man called me at 3 a.m. and said, "I'm coming out of retirement," I'd have my cleats on before he finished the sentence. Again.</p>
-        <p>But he launched a coconut water called GOOD NUT...</p>
-        <p>...and didn't ask me to be part of it.</p>
+
+        <p>
+          If this man called me at 3 a.m. and said, "I'm coming out of retirement,"
+          I'd have my cleats on before he finished the sentence.
+        </p>
+
+        <p>Again.</p>
+
+        <p>
+          Then he launched a coconut water called <span class="punch">GOOD NUT</span>.
+        </p>
+
+        <p>And did not ask me to be part of it.</p>
+
         <p>Bro.</p>
+
         <p>I'm right here.</p>
-        <p>You need a giant dude to hold a coconut? I'm right here. You need somebody to spike a coconut so hard it registers on the Richter scale? That is literally my core competency.</p>
+
+        <div class="aside">
+          You need a giant dude to hold a coconut? I am available. You need someone to spike a coconut
+          hard enough to make a weather app send an alert? That is my lane.
+        </div>
+
         <p>Instead, he partnered with a delivery app.</p>
-        <p>Because when most people think "coconut water," they obviously think "convenient logistics platform."</p>
-        <p>Not the 6'6" maniac who's spent the last fifteen years treating every object on Earth like an end-zone football.</p>
-        <p>I'm just saying if you asked 70 people to design the perfect spokesperson for a drink called GOOD NUT, at least 69 of them would accidentally draw me.</p>
-        <p>Whatever. It's fine. I'm happy for him. Really.</p>
-        <p style="font-weight: 900; font-style: italic; font-size: clamp(1.2rem, 2.5vw, 1.8rem); color: var(--gold); margin: 32px 0;">Anyway, I bought this website.</p>
+
+        <p>
+          Which is fine. Delivery apps are great. Very brave. Very hydrated.
+        </p>
+
+        <p>
+          But if you asked 70 people to design the perfect spokesperson for a drink called GOOD NUT,
+          at least 69 of them would accidentally draw me.
+        </p>
+
+        <p><strong>Anyway, I bought this domain.</strong></p>
+
         <p>This seemed healthier than starting a podcast.</p>
       </div>
     </section>
 
-    <!-- 4. TEXT EXCHANGE -->
-    <section style="padding: 40px 0;">
-      <div class="wrap center">
-        <p class="section-label">Exhibit A.</p>
+    <section class="page">
+      <div class="slab">
+        <div class="label">Exhibit A</div>
         <h2>A Totally Real Text Exchange</h2>
-        <p class="muted">actual text exchange, not even kidding</p>
-        <img class="text-exchange" src="assets/text-exchange.png" alt="Parody iMessage screenshot with contact My QB1 Goat." />
+        <p>Actual text exchange. Not even kidding. History will decide who handled this with dignity.</p>
+
+        <img class="text-exchange" src="assets/text-exchange.png" alt="Parody iMessage screenshot with contact My QB1 Goat.">
       </div>
     </section>
 
-    <!-- 5. REVIEW CARDS (one-liners) -->
-    <section>
-      <div class="wrap">
-        <div class="center" style="margin-bottom: 40px;">
-          <p class="section-label">Honest. Unbiased. Objective.</p>
-          <h2>The Review</h2>
-          <p class="muted">From a guy with absolutely no personal stake in this whatsoever.</p>
-        </div>
-        <div class="grid review-grid">
-          <article class="flavor" style="text-align: left;">
-            <h3>🥥 Original</h3>
-            <div class="score">6.9 / 10</div>
-            <p>I hate how much I liked this.</p>
-            <p>It's clean. Refreshing. Crisp.</p>
-            <p>It tastes like a coconut that got an MBA.</p>
-            <p>The kind of drink that makes you say things like "electrolyte profile" and "recovery protocol" without irony.</p>
-          </article>
-          <article class="flavor" style="text-align: left;">
-            <h3>🍫 Chocolate</h3>
-            <div class="score">9.69 / 10</div>
-            <p>Two things I love. Chocolate - good. Milk - good.</p>
-            <p>This is the one. This is the reason I'm mad I'm not involved.</p>
-            <p>I would drink this on camera. I would drink this off camera. I would drink this at a press conference and then spike the can so hard it dents the podium.</p>
-            <p>9.69 out of 10 and I'm not even rounding up.</p>
-          </article>
-          <article class="flavor" style="text-align: left;">
-            <h3>✨ Sparkling</h3>
-            <div class="score">6.9 / 10</div>
-            <p>This tastes like a coconut that moved to Miami and started networking.</p>
-            <p>There's a lot happening.</p>
-            <p>I respect the hustle.</p>
-            <p>Would I drink it again? Sure.</p>
-            <p>Do I fully understand it? No.</p>
-          </article>
-          <article class="flavor" style="text-align: left;">
-            <h3>🍺 Beer <span class="muted" style="font-size: 0.7em;">(control group)</span></h3>
-            <div class="score">69 / 10</div>
-            <p>Beer. Because it's beer.</p>
-          </article>
-        </div>
+    <section class="page">
+      <div class="label">The actual review</div>
+      <h2>I Tried The Flavors Because I Am A Professional.</h2>
+
+      <div class="reviews">
+        <article class="review">
+          <h3>🥥 Original</h3>
+          <div class="score">6.9 / 10</div>
+          <p>I hate how much I liked this.</p>
+          <p>Clean. Crisp. Annoyingly competent.</p>
+          <p>It tastes like a coconut that got an MBA but still remembers where it came from.</p>
+        </article>
+
+        <article class="review">
+          <h3>🍫 Chocolate</h3>
+          <div class="score">9.69 / 10</div>
+          <p>This is the one.</p>
+          <p>This is why I'm mad.</p>
+          <p>I would drink this on camera, off camera, at a press conference, or while explaining to children why loyalty matters.</p>
+        </article>
+
+        <article class="review">
+          <h3>✨ Sparkling</h3>
+          <div class="score">6.9 / 10</div>
+          <p>This tastes like a coconut moved to Miami and started networking.</p>
+          <p>There is a lot happening.</p>
+          <p>I respect the hustle. I do not fully understand the hustle.</p>
+        </article>
+
+        <article class="review">
+          <h3>🍺 Beer</h3>
+          <div class="score">69 / 10</div>
+          <p>Control group.</p>
+          <p>Beer remains undefeated.</p>
+        </article>
       </div>
     </section>
 
-    <!-- 6. KEVIN CALLOUT (tight) -->
-    <section style="padding: 40px 0;">
-      <div class="wrap big short-lines center">
-        <p class="section-label">One Thing I Will Say.</p>
-        <p>If anybody on Earth was going to launch a coconut water, it was always going to be this guy.</p>
+    <section class="page">
+      <div class="paper alt2">
+        <div class="label">Important context</div>
+        <h2>One Thing I Will Admit</h2>
+
+        <p>If anyone on Earth was going to launch a coconut water, it was always going to be this guy.</p>
+
         <p>He probably knows the first name of the coconut.</p>
+
         <p>Not the farmer.</p>
+
         <p>The coconut.</p>
-        <p style="font-weight: 900; font-style: italic; font-size: clamp(1.4rem, 3vw, 2rem); color: var(--gold); margin: 32px 0;">"Yeah, that's Kevin. Great tree. Consistent work ethic."</p>
-        <p>Honestly, the coconut water is step one. Give it six months and he'll be selling us organic air.</p>
+
+        <p><strong>"Yeah, that's Kevin. Great tree. Consistent work ethic."</strong></p>
+
+        <p>
+          So yes, I am proud of him. Obviously. Deeply. Sincerely.
+        </p>
+
+        <p>
+          I just would have liked the opportunity to spike a coconut professionally.
+        </p>
       </div>
     </section>
 
-    <!-- 7. FAQ -->
-    <section>
-      <div class="wrap">
-        <p class="section-label center">You Have Questions.</p>
-        <h2 class="center">FAQ</h2>
-        <div class="grid faq-grid">
-          <article class="faq"><h3>Q: Are you actually mad?</h3><p>No.</p><p>I bought a website, reviewed every flavor, built an FAQ section, and spent three days researching coconut water.</p><p>But I'm not mad.</p></article>
-          <article class="faq"><h3>Q: Did he ask you to do this?</h3><p>No.</p><p>Which is becoming a pattern.</p></article>
-          <article class="faq"><h3>Q: Have you told him about this website?</h3><p>Not yet.</p><p>I'm waiting for him to discover it organically.</p><p>Like a coconut.</p></article>
-          <article class="faq"><h3>Q: What's your biggest criticism of the product?</h3><p>Lack of me.</p></article>
-          <article class="faq"><h3>Q: What would you change?</h3><p>The ownership structure.</p></article>
-          <article class="faq"><h3>Q: Would you invest in the company?</h3><p>I already have.</p><p>I bought every flavor.</p></article>
-          <article class="faq"><h3>Q: Why did you buy this domain?</h3><p>Closure.</p></article>
-          <article class="faq"><h3>Q: Is this a review website or a cry for help?</h3><p>Next question.</p></article>
-          <article class="faq"><h3>Q: If the drink is actually good, what's the problem?</h3><p>That's the problem.</p><p>If it tasted terrible I'd have a much stronger case.</p></article>
-          <article class="faq"><h3>Q: What happens if they call and ask you to be involved?</h3><p>I have prepared a statement.</p><p>"Yes."</p></article>
+    <section class="page">
+      <div class="label">Frequently muttered questions</div>
+      <h2>Not An FAQ. More Of A Paper Trail.</h2>
+
+      <div class="scraps">
+        <div class="scrap">
+          <p><strong>Am I actually mad?</strong></p>
+          <p>No. I bought a domain, reviewed every flavor, and built a website. Very different.</p>
+        </div>
+
+        <div class="scrap">
+          <p><strong>Did he ask me to do this?</strong></p>
+          <p>No. Which is becoming a theme.</p>
+        </div>
+
+        <div class="scrap">
+          <p><strong>Biggest product flaw?</strong></p>
+          <p>Lack of me.</p>
+        </div>
+
+        <div class="scrap">
+          <p><strong>What would I change?</strong></p>
+          <p>The ownership structure.</p>
         </div>
       </div>
+
+      <figure class="photo">
+        <img src="assets/spokesman-left-behind.png" alt="The Spokesman They Left Behind - parody movie poster.">
+        <figcaption>alternate title: man discovers coconut water has marketing department, somehow not him</figcaption>
+      </figure>
     </section>
 
-    <!-- 8. SPOKESMAN LEFT BEHIND POSTER -->
-    <section style="padding: 30px 0;">
-      <div class="wrap">
-        <figure class="feature-img">
-          <img src="assets/spokesman-left-behind.png" alt="The Spokesman They Left Behind - parody movie poster." />
-        </figure>
-      </div>
-    </section>
+    <section class="page closing">
+      <div class="paper">
+        <div class="label">The emotional part, unfortunately</div>
 
-    <!-- 9. ONE CONTINUOUS ENDING: Tribute → Call Me → Sunset -->
-    <section class="closing">
-      <div class="wrap big center short-lines" style="padding-bottom: 20px;">
-        <p style="margin-bottom: 24px;">In all seriousness, this dude is the greatest.</p>
-        <p style="font-size: 1.3rem; font-weight: 700; letter-spacing: 1px; margin-bottom: 6px;">Teammate.</p>
-        <p style="font-size: 1.3rem; font-weight: 700; letter-spacing: 1px; margin-bottom: 6px;">Competitor.</p>
-        <p style="font-size: 1.3rem; font-weight: 700; letter-spacing: 1px; margin-bottom: 20px;">Friend.</p>
-        <p style="opacity: 0.9;">And now, somehow, coconut entrepreneur.</p>
-        <p style="font-weight: 600; margin-top: 16px;">I'm proud of him.</p>
-        <p style="opacity: 0.85;">I just would've liked the opportunity to spike a coconut professionally.</p>
-        <p style="margin-top: 24px;">🤙</p>
-      </div>
-    </section>
+        <p>In all seriousness, this dude is the greatest.</p>
 
-    <section style="padding: 30px 0 0;">
-      <div class="wrap big center short-lines">
-        <p class="section-label">One Last Thing.</p>
-        <h2>If You're Reading This</h2>
-        <p>Call me.</p>
+        <p>Teammate. Competitor. Friend.</p>
+
+        <p>And now, somehow, coconut entrepreneur.</p>
+
+        <p>I'm proud of him.</p>
+
+        <p>I just also remain extremely available.</p>
+
+        <div class="call">Call Me.</div>
+
         <p>You know the number.</p>
         <p>I've had the same one since 2010.</p>
         <p>I will fly anywhere to film the ad.</p>
@@ -450,39 +624,28 @@
         <p>I will spike a coconut.</p>
         <p>I will spike anything.</p>
         <p>That is a standing offer.</p>
-        <p>And it expires...</p>
-        <p>Actually, it doesn't expire.</p>
-        <p style="font-weight: 700;">I'll always pick up for you.</p>
-        <figure class="feature-img" style="margin-top: 24px;">
-          <img src="assets/offer-still-stands.png" alt="The Offer Still Stands - sunset beach with football and coconut." />
-        </figure>
-        <p style="margin-top: 28px; font-size: 1.1rem; font-weight: 600;">Built with love, mild jealousy, and exactly 69 coconuts.</p>
-        <p style="margin-top: 8px;">🥥🏈❤️</p>
-      </div>
-    </section>
 
-    <!-- 10. DISCLAIMER -->
-    <section style="padding: 40px 0 0;">
-      <div class="wrap">
-        <div class="disclaimer">
-          <strong>LEGAL DISCLAIMER</strong><br><br>
-          All characters appearing on this website—even those suspiciously resembling real people—are entirely fictional.<br><br>
-          All conversations, events, reviews, statistics, championship totals, touchdown totals, text messages, and coconut-related grievances have been dramatized for comedic purposes.<br><br>
-          Any celebrity voices heard while reading this website exist entirely in your imagination.<br><br>
-          No affiliation with any athlete, beverage company, delivery service, or coconut should be inferred.<br><br>
-          Viewer discretion is advised.<br><br>
-          Especially if you are a coconut.
-        </div>
+        <figure class="photo">
+          <img src="assets/offer-still-stands.png" alt="sunset beach with football and coconut">
+          <figcaption>the offer still stands, emotionally and contractually</figcaption>
+        </figure>
+
+        <p style="margin-top:24px"><strong>Built with love, mild jealousy, and exactly 69 coconuts.</strong></p>
+        <p>🥥 🏈 ❤️</p>
+      </div>
+
+      <div class="disclaimer">
+        This website is satire. All reviews, grievances, statistics, coconut-related allegations,
+        emotional damages, and claims of professional coconut-spiking readiness are presented for comedic purposes.
+        No affiliation with any athlete, beverage company, delivery service, or coconut should be inferred.
+        Especially the coconut.
       </div>
     </section>
   </main>
 
-  <footer class="wrap">
-    &copy; 2026 Good-Nut.com &nbsp;|&nbsp; A labor of love and mild jealousy
-    <p style="margin-top: 8px; font-size: 0.85rem;">Fan mail, sponsorship offers, and coconut-related apologies: <a href="mailto:contact@good-nut.com" target="_blank" style="color: var(--gold); text-decoration: none; border-bottom: 1px solid var(--gold); cursor: pointer;">contact@good-nut.com</a></p>
+  <footer class="page">
+    &copy; 2026 Good-Nut.com &middot; fan mail, sponsorship offers, and coconut apologies:
+    <a href="mailto:contact@good-nut.com">contact@good-nut.com</a>
   </footer>
-
-
-
 </body>
 </html>
